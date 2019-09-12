@@ -1,12 +1,23 @@
-
-
 const express = require('express');
+
+const app = express();
+
+app.get('/',(req, res, next )=>{
+  res.send("Hello World Again");
+});
+
+app.listen(3000, console.log('App function is listening') );
+
+
+
+
+
+
+/*
 const path = require('path');
 
 const dataLayer = db('users.json', ()=>{});
 
-
-const app = express();
 
 
 
@@ -18,4 +29,5 @@ app.get('/api/users',async() => {
 
 });
 
-app.listen(3000, ()=> console.log('listening on port 3000'));
+
+*/
