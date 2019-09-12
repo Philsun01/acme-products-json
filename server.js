@@ -22,6 +22,25 @@ app.get('/api/products', async (req, res, next) => {
 
 });
 
+app.delete('/api/products', async (req, res, next)=>{
+  try{
+    console.log(req.body)
+    res.send( await db.destroy(req.body))
+  }
+  catch(ex){
+    next(ex);
+  }
+})
+
+app.post('/api/products', async (req,res, next)=>{
+  try{
+    res.send(await db.create(req.body))
+  }
+  catch(ex){
+    next(ex);
+  }
+})
+
 app.listen(3000, console.log('App function is listening') );
 
 

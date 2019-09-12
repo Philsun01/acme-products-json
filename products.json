@@ -1,7 +1,7 @@
 [
- {
-   "name": "Mangos",
-   "price": 1
- }
-
+  {
+    "name": "Mangos",
+    "price": 1,
+    "id": 1
+  }
 ]
